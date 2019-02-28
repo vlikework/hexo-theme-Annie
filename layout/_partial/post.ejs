@@ -1,8 +1,8 @@
 <div class="layout-post">
-	<% 
-		permalink = config.url + config.root + post.path 
+	<%
+		permalink = config.url + config.root + post.path
 	%>
-	
+
 	<div class="article-title">
 		<%- partial('post/title', {post: post}) %>
 	</div>
@@ -14,16 +14,16 @@
 		<%= __('split_line')%>
 		<span>
 			<i class="fa fa-tags"></i>
-			<%- partial('post/tag', {post: post}) %>		
+			<%- partial('post/tag', {post: post}) %>
 		</span>
 		<%= __('split_line') %>
 		<%- partial('post-like') %>
 	</div>
 
 	<div class="article-content" id="article-content">
-		<%- post.content %>	
+		<%- post.content %>
 	</div>
-	
+
 	<div id="current-post-cover" data-scr="<%- url_for(post.cover || theme.cover) %>"></div>
 
 	<!-- relate post, comment...-->
@@ -33,19 +33,19 @@
 				<div class="on"><%= __('related_posts') %></div>
 				<div><%= __('comment') %></div>
 			</div>
-			<div class="investment-title-2">	            
-				<%- partial('post/navigation', {number: 0}) %>  		
-			</div>	
+			<div class="investment-title-2">
+				<%- partial('post/navigation', {number: 0}) %>
+			</div>
 		</div>
-		
+
 		<div class="investment-content">
 			<div class="investment-content-list">
-				<%- partial('post-relate') %>	
+				<%- partial('post-relate') %>
 			</div>
 			<div class="investment-content-list">
 				<%- partial('third/comment') %>
 			</div>
-		</div>	
+		</div>
 	</div>
 </div>
 

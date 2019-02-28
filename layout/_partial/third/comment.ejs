@@ -7,22 +7,23 @@
 			<!-- comment gitalk -->
 			<%- partial('comment/gitalk') %>
 
-		<% } else if(theme.valine.enable && !theme.leancloud_count.enable) { %>
+		<% } if(theme.valine.enable && !theme.leancloud_count.enable) { %>
 
 			<!-- comment valine -->
 			<%- partial('comment/valine') %>
 
-		<% } else if(theme.livere.enable) { %>
-			
-			<!-- comment valine -->
-			<%- partial('comment/livere') %>
-			
-		<% } else { %>
+		<% }  if(theme.livere.enable) { %>
 
-			<!-- I don't know 【表情】-->
-			
+			<!-- comment livere -->
+			<%- partial('comment/livere') %>
+
+		<% }  if(theme.disqus.enable) { %>
+
+			<!-- comment disqus -->
+			<%- partial('comment/disqus') %>
+
 		<% } %>
-		
+
 	<% } %>
 
 </div>
