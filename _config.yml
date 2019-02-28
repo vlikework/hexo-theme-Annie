@@ -73,6 +73,12 @@ valine:
 livere: 
     enable: false
     livere_uid: 'sdd'
+
+## disqus comment support ##
+disqus:
+    enable: false
+    disqus_shortname: xxxid
+
     
 # post_count
 leancloud_count:
@@ -150,3 +156,9 @@ love:
 #totop
 totop:
     enable: true
+
+
+# google_analytics
+#
+google_analytics: XXXX
+
